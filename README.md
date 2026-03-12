@@ -26,16 +26,9 @@ The primary goal is to explore deep learning approaches for network security and
 ---
 
 ## Model Architecture
-- **Type:** Fully-connected feedforward neural network (MLP)
-- **Input:** 70 features
-- **Hidden Layers:** 3 layers with ReLU activations, optional Dropout for regularization
-- **Output:** 1 neuron with Sigmoid activation (binary classification)
-- **Loss Function:** `BCEWithLogitsLoss`
-- **Optimizer:** Adam
-- **Training Parameters:**
-  - Epochs: 30
-  - Batch size: 1024
-  - Learning rate: 1e-3
+- **Type:** Random Forest classifier
+- **Input:** 18 Features
+
 
 **Baseline Architecture Example:**
 
@@ -45,17 +38,14 @@ The primary goal is to explore deep learning approaches for network security and
 ## Training & Evaluation
 - **Train-Test Split:** Stratified 80-20
 - **Metrics Monitored:**
-  - Training and validation loss
-  - ROC-AUC
   - Precision
   - Recall
+  - F1 score
 - **Performance:**  
   Near-perfect scores on validation data:
-  - ROC-AUC ≈ 1.0  
-  - Precision ≈ 1.0  
-  - Recall ≈ 1.0  
-
-> **Note:** Perfect performance is likely due to dataset simplicity and clear separability between benign and brute-force attack patterns.
+  - F1 score ≈ 0.98
+  - Precision ≈ 0.96 
+  - Recall ≈ 0.98 
 
 ---
 
